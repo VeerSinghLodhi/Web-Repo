@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background: url("Images/HomePicture.webp") no-repeat;
+            background-size: cover; */
+            background-color: #00f2fe;
+            min-height: 100vh;
+        }
+
+        .parent {
+            display: flex;
+            border: 3px solid black;
+            flex-direction: column;
+            background-color: transparent;
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            color: white;
+            border-radius: 8px;
+            padding:0 20px;
+            transition:all .3s;
+            animation-timing-function: ease-in-out;
+            animation: veer ease-in 1s 1 ;
+        }
+        @keyframes veer{
+            from{
+                transform: translateX(-1000px);
+            }
+            to{
+                transform: translate(50px);
+            }
+        }
+        .parent-register {
+            display: flex;
+            border: 3px solid black;
+            flex-direction: column;
+            background-color: transparent;
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            color: white;
+            border-radius: 8px;
+            padding:0 20px;
+            transition:all .3s;
+            display: none;
+            animation: singh ease-in 1s 1 ;
+        }
+        @keyframes singh{
+            from{
+                transform: translateX(-1000px);
+            }
+            to{
+                transform: translate(50px);
+            }
+        }
+        .parent:hover{
+            transform: translateY(-10px);
+        }
+        .parent .box {
+            padding: 10px;
+        }
+
+        a{
+            text-decoration: none;
+            /* color:white; */
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        .login-label {
+            text-align: center;
+            padding:20px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .input-text {
+            width: 100%;
+            height: 35px;
+            border-radius: 50px;
+            font-size: 20px;
+            border:none;
+            outline:none;
+            transition: all .3s;
+        }
+
+        .input-text:hover{
+            box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+        }
+
+        .btn {
+            width: 100%;
+            height: 35px;
+            background-color: aliceblue;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all .3s;
+        }
+        .btn:hover{
+            background:transparent;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+        }
+        .remember-box {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+        .register{
+            padding:15px 0;
+            justify-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        u=null;
+        p=null;
+        function login(){
+            username=document.getElementById("username").value;
+            password=document.getElementById("password").value;
+            if(u==username && p==password)
+                alert("Welcome ",username);
+            else{
+                alert("Invalid Username/Password");
+            }
+        }
+        function f2(){
+            document.getElementById("p1").style.display="none";
+            document.getElementById("p2").style.display="flex";
+        }
+        function f3(){
+            document.getElementById("p1").style.display="flex";
+            document.getElementById("p2").style.display="none";
+        }
+        function f4(){
+            
+            username=document.getElementById("susername").value;
+            password1=document.getElementById("spassword").value;
+            password2=document.getElementById("confirm-password").value;
+            if(username==null || password1==null ||password2==null)
+            {
+                alter("Please fill information");
+                
+            }
+            if(password1==password2)
+            {
+                u=username;
+                p=password1;
+            }
+            else{
+                
+            }
+        }
+    </script>
+    <div>
+        <div class="parent" id="p1">
+            <h2 class="login-label">Login</h2>
+            <form>
+                <div class="box">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="input-text" id="username" name="username">
+                </div>
+                <div class="box">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="input-text" id="password" name="password">
+                </div>
+                <div class="remember-box">
+                    <p><input type="checkbox" id="remember-me">Remember me</p>
+                    <a href="#">Forget password?</a>
+                </div>
+                <button type="submit" class="btn" onclick="login()">Login</button>
+                <div class="register">
+                    <p>Don't have an account?<a onclick="f2()" href="#">Register</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="parent-register" id="p2">
+            <h2 class="login-label" >Sign in</h2>
+            <table>
+            <div class="box">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="input-text" id="susername" name="susername">
+            </div>
+            <div class="box">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="input-text" id="spassword" name="spassword">
+            </div>
+            <div class="box">
+                <label for="confirm-password" class="form-label">Confirm password</label>
+                <input type="password" class="input-text" id="confirm-password" name="confirm-password">
+            </div>
+            <div class="remember-box">
+                <p><input type="checkbox" id="remember-me">Remember me</p>
+                <a href="#">Forget password?</a>
+            </div>
+            <button type="submit" class="btn" onclick="f4()">Sign in</button>
+            <div class="register">
+                <p>I have an account.<a href="#" onclick="f3()" >Login</a></p>
+            </div>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
