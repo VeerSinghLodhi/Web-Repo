@@ -1,0 +1,121 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background: url("Images/HomePicture.webp") no-repeat;
+            background-size: cover; */
+            background-color: #00f2fe;
+            min-height: 100vh;
+        }
+
+        .parent {
+            display: flex;
+            border: 3px solid black;
+            flex-direction: column;
+            background-color: transparent;
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            color: white;
+            border-radius: 8px;
+            padding:0 20px;
+            transition:all .3s;
+            animation-timing-function: ease-in-out;
+            animation: veer ease-in 1s 1 ;
+        }
+        @keyframes veer{
+            from{
+                transform: translateX(-1000px);
+            }
+            to{
+                transform: translate(50px);
+            }
+        }
+        .parent-register {
+            display: flex;
+            border: 3px solid black;
+            flex-direction: column;
+            background-color: transparent;
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            color: white;
+            border-radius: 8px;
+            padding:0 20px;
+            transition:all .3s;
+            display: none;
+            animation: singh ease-in 1s 1 ;
+        }
+        @keyframes singh{
+            from{
+                transform: translateX(-1000px);
+            }
+            to{
+                transform: translate(50px);
+            }
+        }
+        .parent:hover{
+            transform: translateY(-10px);
+        }
+        .parent .box {
+            padding: 10px;
+        }
+
+        a{
+            text-decoration: none;
+            /* color:white; */
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        .login-label {
+            text-align: center;
+            padding:20px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .input-text {
+            width: 100%;
+            height: 35px;
+            border-radius: 50px;
+            font-size: 20px;
+            border:none;
+            outline:none;
+            transition: all .3s;
+        }
+
+        .input-text:hover{
+            box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+        }
+
+        .btn {
+            width: 100%;
+            height: 35px;
+            background-color: aliceblue;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all .3s;
+        }
+        .btn:hover{
+            background:transparent;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+        }
+        .remember-box {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+        .register{
+            padding:15px 0;
+            justify-items: center;
+        }
