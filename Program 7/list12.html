@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Bungee+Spice&family=Righteous&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        nav{
+            background-color: black;
+            width: 100%;
+            height: 80px;
+            color:aqua;
+        }
+        nav label{
+            font-family: "Bungee Spice", sans-serif;
+            font-weight: 400;
+            font-style: normal;   
+            margin-left: 20px;
+            font-size: 30px;
+            line-height: 80px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        nav ul{
+            float: right;
+            margin-right: 10%;
+        }
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            line-height: 80px;
+            margin: 0 10px;
+        }
+        nav ul li a{
+            font-size: 20px;
+            color: white;
+            padding: 7px 13px;
+            border-radius: 3px;
+        }
+        nav a:hover{
+            font-family: "Bungee Spice", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-transform: uppercase;
+            background-color: white;
+            transition: .5s;
+            border-radius: 50%;
+        }
+        section{
+            background-color: bisque;
+            width:100%;
+            height: 570px;
+        }
+        section form input{
+            width: 200px;
+            height: 30px;
+            margin-left: 40%;
+            margin-top: 5%;
+            font-size: 25px;
+        }
+        section form label{
+            font-size: 25px;
+            margin-left: 40%;
+            margin-top: 2%;
+            font-weight: bold;
+        }
+        footer{
+            background-color: black;
+            width: 100%;
+            height: 80px;
+        }
+        footer label{
+            font-family: "Bungee Spice", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 80px;
+            font-size: 30px;
+            color:white;
+            margin:20px;
+        }
+        footer ul li a img{
+            width: 20px ;
+            height: 20px;
+        }
+        footer ul{
+            float:right;
+            margin-right: 60%;
+        }
+        footer a img:hover{
+            transition: .5s;
+            border-radius: 30%;
+            width: 40px;
+            height: 40px;
+        }
+        footer ul li{
+            list-style: none;
+            display: inline-block;
+            line-height: 80px;
+            padding:7px 13px;
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <nav>
+            <label>Veer Singh Lodhi</label>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>Services</a></li>
+                <li><a>Address</a></li>
+                <li><a>Feedback</a></li>
+            </ul>
+        </nav>
+     </header>
+     <section>
+                <form>
+                    <label>Username</label>
+                    <input type="text" name="veer">
+                </form>
+     </section>
+     <footer>
+        <label>Krishna Kurmi</label>
+        <ul>
+            <li><a href=""><img src="App Logo/Visual_Studio_Code_1.35_icon.svg.png"/></a></li>
+            <li><a href="#"><img src="App Logo/Instagram_icon.png"/></a></li>
+            <li><a href="#"><img src="App Logo/LinkedIn_logo_initials.png"/></a></li>           
+        </ul>
+     </footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .main_ul{
+            width: 100%;
+            height: 80px;
+            box-shadow: 0 20px 30px 40px rbga(0,0,0,0.3);
+            background-color: rgb(0,102,102);
+            color:#ffffff;
+        }
+        nav ul{
+            float:right;
+            margin-right: 20%;
+        }
+        nav ul li{
+            display: inline;
+            line-height: 80px;
+            font-size:20px;
+            padding:7px 15px;
+        }
+        nav->ul{
+            display: none;
+        }
+        nav->ul:hover{
+            display: inline;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main_ul">
+            <ul>
+                <li>Laxman
+                    <ul>
+                        <li>Ramsakhi</li>
+                        <li>Veer</li>
+                        <li>Rajeshwari</li>
+                    </ul>
+                </li>
+                <li>Balram
+                    <ul>
+                        <li>Pawan</li>
+                        <li>Laxmi</li>
+                        <li>Hanumat</li>
+                        <li>Mohni</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

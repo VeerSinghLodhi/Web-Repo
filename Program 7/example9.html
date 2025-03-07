@@ -1,0 +1,257 @@
+<html>
+<head>
+<style>
+*, *:before, *:after { box-sizing: border-box; } 
+html { font-family: Helvetica, Arial, sans-serif; 
+font-size: 100%; 
+background: #333; 
+} 
+
+#page-wrapper { width: 640px; 
+			  background: #FFFFFF; 
+			  padding: 1em; 
+			  margin: 1em auto;
+			  border-top: 5px solid #69c773; 
+			  box-shadow: 0 2px 10px rgba(232,0,0,0.8); } 
+h1 { margin-top: 0; } 
+pre { background: #EEE; 
+	  padding-top: 1em; 
+	  border-left: 5px solid #69c773; } 
+#disc { list-style-type: disc; } 
+#circle { list-style-type: circle; } 
+#square {list-style-type: square; } 
+#decimal { list-style-type: decimal; } 
+#decimal-leading-zero { list-style-type: decimal-leading-zero; } 
+#lower-roman { list-style-type: lower-roman; } 
+#upper-roman { list-style-type: upper-roman; } 
+#lower-greek { list-style-type:lower-greek; } 
+#lower-latin { list-style-type: lower-latin; } 
+#upper-latin { list-style-type: upper-latin; } 
+#armenian { list-style-type: armenian; } 
+#georgian { list-style-type: georgian; } 
+#lower-alpha { list-style-type: lower-alpha; } 
+#upper-alpha{ list-style-type: upper-alpha; } 
+#none { list-style-type: none; } 
+#outside { list-style-position: outside; } 
+#inside { list-style-position: inside; } 
+#image {  line-height: 1.5em; 
+list-style-image: url("E:/lectures_HTML/images/tn_teddy1.jpg");
+}
+</style>
+</head>
+<body>
+<div id="page-wrapper">
+    <h1>HTML List Demos</h1>
+    <h2>Ordered Lists</h2>
+    <code><pre>
+    &lt;ol&gt;
+      &lt;li&gt;Google Chrome&lt;/li&gt;
+      &lt;li&gt;Internet Explorer&lt;/li&gt;
+      &lt;li&gt;Mozilla Firefox&lt;/li&gt;
+      &lt;li&gt;Safari&lt;/li&gt;
+      &lt;li&gt;Opera&lt;/li&gt;
+    &lt;/ol&gt;
+  </pre>
+  </code>
+    <ol>
+        <li>Google Chrome</li>
+        <li>Internet Explorer</li>
+        <li>Mozilla Firefox</li>
+        <li>Safari</li>
+        <li>Opera</li>
+    </ol>
+    <h3>The <code>start</code> Attribute</h3>
+    <code><pre>
+    &lt;ol <strong>start="3"</strong>&gt;
+      &lt;li&gt;Google Chrome&lt;/li&gt;
+      &lt;li&gt;Internet Explorer&lt;/li&gt;
+      &lt;li&gt;Mozilla Firefox&lt;/li&gt;
+      &lt;li&gt;Safari&lt;/li&gt;
+      &lt;li&gt;Opera&lt;/li&gt;
+    &lt;/ol&gt;
+  </pre></code>
+    <ol start="3">
+        <li>Google Chrome</li>
+        <li>Internet Explorer</li>
+        <li>Mozilla Firefox</li>
+        <li>Safari</li>
+        <li>Opera</li>
+    </ol>
+    <h3>The <code>reversed</code> Attribute</h3>
+    <code><pre>
+    &lt;ol <strong>reversed</strong>&gt;
+      &lt;li&gt;Google Chrome&lt;/li&gt;
+      &lt;li&gt;Internet Explorer&lt;/li&gt;
+      &lt;li&gt;Mozilla Firefox&lt;/li&gt;
+      &lt;li&gt;Safari&lt;/li&gt;
+      &lt;li&gt;Opera&lt;/li&gt;
+    &lt;/ol&gt;
+  </pre></code>
+    <ol reversed>
+        <li>Google Chrome</li>
+        <li>Internet Explorer</li>
+        <li>Mozilla Firefox</li>
+        <li>Safari</li>
+        <li>Opera</li>
+    </ol>
+    <h2>Unordered Lists</h2>
+    <code><pre>
+    &lt;ul&gt;
+      &lt;li&gt;Rucksack&lt;/li&gt;
+      &lt;li&gt;Compass&lt;/li&gt;
+      &lt;li&gt;Map&lt;/li&gt;
+      &lt;li&gt;Water Bottle&lt;/li&gt;
+      &lt;li&gt;Jacket&lt;/li&gt;
+    &lt;/ul&gt;
+  </pre></code>
+    <ul>
+        <li>Rucksack</li>
+        <li>Compass</li>
+        <li>Map</li>
+        <li>Water Bottle</li>
+        <li>Jacket</li>
+    </ul>
+
+    <h2>Description Lists</h2>
+    <dl>
+        <dt>Author</dt>
+        <dd>Matt West</dd>
+
+        <dt>Editors</dt>
+        <dd>Sara Shlaer</dd>
+        <dd>Ellie Scott</dd>
+        <dd>Debbye Butler</dd>
+        <dd>Nick Elliott</dd>
+    </dl>
+    <h2>Styling Lists</h2>
+    <h3><code>list-style-type</code></h3>
+    <h4><code>disc</code></h4>
+    <ul id="disc">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ul>
+
+    <h4><code>circle</code></h4>
+    <ul id="circle">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ul>
+
+    <h4><code>square</code></h4>
+    <ul id="square">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ul>
+
+    <h4><code>decimal</code></h4>
+    <ol id="decimal">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+
+    <h4><code>decimal-leading-zero</code></h4>
+    <ol id="decimal-leading-zero">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+
+    <h4><code>lower-roman</code></h4>
+    <ol id="lower-roman">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+
+    <h4><code>upper-roman</code></h4>
+    <ol id="upper-roman">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+    <h4><code>lower-greek</code></h4>
+    <ol id="lower-greek">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+    <h4><code>lower-latin</code></h4>
+    <ol id="lower-latin">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+
+    <h4><code>upper-latin</code></h4>
+    <ol id="upper-latin">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+
+    <h4><code>armenian</code></h4>
+    <ol id="armenian">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+
+    <h4><code>georgian</code></h4>
+    <ol id="georgian">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+
+    <h4><code>lower-alpha</code></h4>
+    <ol id="lower-alpha">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+
+    <h4><code>upper-alpha</code></h4>
+    <ol id="upper-alpha">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+
+    <h4><code>none</code></h4>
+    <ol id="none">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+
+    <h3><code>list-style-position</code></h3>
+
+    <h4><code>outside</code></h4>
+    <ol id="outside">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+
+    <h4><code>inside</code></h4>
+    <ol id="inside">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ol>
+
+
+    <h3><code>list-style-image</code></h3>
+    <ul id="image">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ul>
+
+</div>
+</body>
+</html>

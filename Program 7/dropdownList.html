@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Property</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        nav label{
+            color:#ffffff;
+            line-height: 100px;
+            font-size:30px;
+            font-weight: bold;
+        }
+        a{
+            color:white;
+            background-color:teal;
+            text-decoration:none;
+        }
+        nav{
+            width:100%;
+            height:100px;
+            background: #333;
+        }
+        nav ul{
+            float:right;
+            margin-right:40%;
+        }
+        nav ul li{
+            list-style: none;
+            line-height: 100px;
+        }
+        nav ul li a{
+            font-size:20px;
+            padding:3px 12px;
+            border-radius:10px;
+        }
+        nav ul li  ul {
+            display: none;
+            position:absolute;
+            background:#333;
+            top:42px;
+        }
+        nav ul li a:hover{
+            background-color:hotpink;
+        }
+        nav ul li ul li{
+            float:none;
+        }
+        nav ul li:hover >ul{
+            display:block;
+        }
+        .class{
+            font-weight: bold;
+            color:pink;
+            text-align: center;
+            font-size:40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="class1">
+    <nav>
+        <label>Using Dropdown List</label>
+        <ul>
+            <li>
+                <a href="#">Madhya Predesh</a>
+                <ul>
+                    <li>Sagar</li>
+                    <li>Damoh</li>
+                    <li>Bhopal</li>
+                    <li>Indore</li>
+                    <li>Katni</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    </div>
+</body>
+</html>

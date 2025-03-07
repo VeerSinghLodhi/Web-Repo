@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition 2</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav{
+            width:100%;
+            height:80px;
+            background-image:linear-gradient(to bottom,black,skyblue);
+            height:10vh;
+        }
+        nav ul{
+            float:right;
+            margin-right:10%;
+            position:relative;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            line-height: 80px;
+        }
+        nav ul li a{
+            padding:7px 14px;
+            color:white;
+        }
+        nav ul li a:hover{
+            text-transform: uppercase;
+            border:2px solid transparent;
+            border-radius: 5px;
+            box-shadow: 0 5px 5px 0 rgba(10,10,10,0.7);
+        }
+        
+        #listdown{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a>Home
+                <div class="listdown"><ul>
+                    <li>veer</li>
+                    <li>hani</li>
+                    <li>mohni</li>
+                    <li>pawan</li>
+                </ul></div>
+            </a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact</a></li>
+            <li><a>Feedback</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

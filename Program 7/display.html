@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        nav{
+            width:100%;
+            height:80px;
+            background-color:teal;
+            position:sticky;
+            top:0;
+            left:0;
+            z-index: 1;
+        }
+        section{
+            position: relative;
+            top:0;
+            left: 0;
+            background-color:pink;
+            width:100%;
+            height:1000px;
+        }
+        .parent-box{
+            padding:10px;
+            margin:10px;
+        }
+        .box1{
+            background-color:red;
+            width: 800px;
+            height:80px;
+            position:fixed;
+            right:100px;
+            bottom:10px;
+            border:2px solid black;
+        }
+        .box2{
+            background-color:aqua;
+            width: 800px;
+            height:80px;
+            position:absolute;
+            top:250px;
+            left:400px;
+            border:2px solid black;
+        }
+        .box3{
+            background-color:blue;
+            width: 800px;
+            height:80px;
+            border:2px solid black;
+        }
+        .box4{
+            background-color:blueviolet;
+            width: 800px;
+            height:80px;
+            border:2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <label>Navigation</label>
+    </nav>
+    <section>
+    <div class="parent-box">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+    </div>
+    </section>
+    <footer>
+        <label>Footer</label>
+    </footer>
+</body>
+</html>

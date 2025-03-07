@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 300px;
+            height: 200px;
+            border:1px solid #ccc;
+            position:relative;
+            box-shadow: 0 20px 20px 0 rgba(0,0,0,0.3);
+        }
+        .absolute-box{
+            width: 100px;
+            height: 100px;
+            background-color: #2ecc71;
+            position:absolute;
+            top:20px;
+            left:20px;
+        }
+        .fixed-box{
+            width: 100px;
+            height:100px;
+            background-color:#f39c12;
+            position:fixed;
+            bottom: 20px;
+            right:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="absolute-box">veer</div>
+        <div class="fixed-box">Singh</div>
+    </div>
+</body>
+</html>

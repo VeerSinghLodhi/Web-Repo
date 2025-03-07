@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition 2</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav{
+            background-image:linear-gradient(to bottom,black,skyblue);
+            height:100vh;
+            height:80px;
+            width: 100%;
+        }
+        h1{
+            width:350px;
+            background-color:antiquewhite;
+            animation: text 4.0s infinite ;
+        }
+        @keyframes text{
+            from{
+                margin-left:100%;
+            }
+            to{
+                margin-left:0%;
+            }
+        }
+        .veer{
+            text-align: center;
+            color:aqua;
+        }
+        #one{
+            animation-timing-function: ease;
+        }
+        #two{
+            animation-timing-function:linear;
+        }
+        #three{
+            animation-timing-function:ease-in;
+        }
+        #four{
+            animation-timing-function:ease-out;
+        }
+        #five{
+            animation-timing-function:ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div calss="veer">Transition Program 2 animation types</div> 
+    </nav>
+        <h1 id="one">This is ease</h1>
+        <h1 id="two">This is linear</h1>
+        <h1 id="three">This is ease-in</h1>>
+        <h1 id="four">This is ease-out</h1>
+        <h1 id="five">This is ease-in-out</h1>
+       <!-- <div id="six"><h1>This is </h1></div> -->
+</body>
+</html>

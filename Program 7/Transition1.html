@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition 1 </title>
+    <style>
+        body{
+            background-image:linear-gradient(to bottom,white,skyblue);
+            height:100vh;
+            display: flex;
+            align-items: center;
+        }
+        body,html{
+            height:100%;
+        }
+        .element{
+            width:300px;
+            height:300px;
+            background-color:lime;
+            margin:0 auto;
+            text-align: center;
+            animation-name:stretch;
+            animation-duration: 2.0s;
+            animation-timing-function: ease-out;
+            animation-direction: alternate;
+            animation-play-state: running;
+            animation-iteration-count:infinite;
+        }
+        @keyframes stretch {
+            0%{
+                transform:scale(.5);
+                background-color:red;
+                border-radius:100%;
+                border:2px solid transparent;
+                box-shadow: 0 10px 10px 0 rgba(10,10,10,0.7);
+            }
+            50%{
+                background-color: orange;
+                text-transform: lowercase;
+            }
+            100%{
+                transform:scale(2.0);
+                background-color:green;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="element">MADHYA PRADESH</div>
+</body>
+</html>
