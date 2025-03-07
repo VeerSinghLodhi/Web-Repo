@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+<h1>Array in-built functions</h1> 
+<script>
+stud_names = ["Sapna","Palash","Satyam","Priya","ABC"];
+marks = [80,78,90,70,80];
+document.write("<br />",stud_names,"<br />",marks);
+ //join
+document.write("<br />",stud_names.join(" * "));
+document.write("<br />",stud_names.sort(),"<br />",marks.sort(),"<br />"); 
+//reverse(); 
+document.write("<br />",stud_names.reverse(),"<br />",marks.reverse());
+//Array.push() : Adding Element at the end of an Array. 
+//As array in JavaScript are mutable object, we can easily 
+//add or remove elements from the Array. And it dynamically 
+//changes as we modify the elements from the array. 
+document.write("<br />",stud_names.push("sumit", "amit"),"<br />",marks.push(60));
+
+// Array.unshift() : Adding elements at the front of an Array 
+marks.unshift(10, 20);
+document.write("<br />",stud_names,"<br />",marks); 
+stud_names.unshift("sunil", "anil");
+document.write("<br />",stud_names,"<br />",marks); 
+
+//array shift(): remove from the begininig of an array
+marks.shift(10);
+stud_names.shift();
+document.write("<br />",stud_names,"<br />",marks); 
+marks.shift(20);
+document.write("<br />",stud_names,"<br />",marks);
+
+//Array.pop() : Removing element from the end of an array
+stud_names.pop();  
+x = stud_names.pop("amit"); 
+document.write("<br />",stud_names.pop());
+document.write("<br />",stud_names);
+/*Array.splice() : Insertion and Removal in between an Array 
+Array.splice (start, deleteCount, item 1, item 2….) 
+Parameters:  
+Start : Location at which to perform operation
+deleteCount: Number of element to be deleted, 
+if no element is to be deleted pass 0.
+Item1, item2 …..- this is an optional parameter . 
+These are the elements to be inserted from location start 
+number_arr.splice(1, 3,"a","b","c"); 
+  */
+document.write("<hr><br />",stud_names.splice(1,2));  
+document.write("<br />",stud_names);
+document.write("<br />",stud_names.splice(2,0,"A","B"));
+document.write("<br />",stud_names);
+</script>
+  </body>
+</html>

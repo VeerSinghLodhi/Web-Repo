@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Code Studio - Array</title>
+  </head>
+  <body>
+    <script>
+    /*array  is a collection of values saved as a large variable  
+    data type		  string	    int		float
+    value         "Neha"      23    23.5
+    name          username    num1  percent
+    */
+    a = new Array(4); //declaration
+    a[0]=10; // assign
+    a[1]=20;
+    a[2]=30;
+    a[3]=40;
+    for(i=0;i<4;i++)
+    {
+      document.write("Array a", a[i]);
+      document.write("<br />");
+    }
+    document.write("<br />");
+    
+    b = new Array("apple","mango","banana","grapes");
+    for(i=0;i<4;i++)
+    {
+      document.write("Array b", b[i]);
+      document.write("<br />");
+    }
+    document.write("<br />");
+  
+    c= new Array(4);
+    c[0] = "Array ";
+    c[1] = "22/dec/2020";
+    c[2] = true;
+    c[3] = 200;
+    for(i=0;i<4;i++)
+    {
+      document.write("Array c", c[i]);
+      document.write("<br />");
+    }
+    document.write(a,"<br />",b,"<br/>",c );
+   </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <script>
+        function f1() {
+            let score = 0;
+            let q = document.getElementsByName("q");
+
+            if (q[1].checked) { 
+                score = 10;
+            } else {
+                score = 0;
+            }
+
+            document.getElementById("p1").innerHTML = "Your score: " + score;
+        }
+
+        function f2() {
+            let score = 0;
+            let s1 = document.getElementById("s1");
+            let ans = s1.selectedIndex;
+
+            switch (ans) {
+                case 1: // Beijing (correct answer)
+                    score = 10;
+                    break;
+                default:
+                    score = 0;
+                    break;
+            }
+
+            document.getElementById("p2").innerHTML = "Your score: " + score;
+        }
+    </script>
+</head>
+<body>
+    <h1>Quiz</h1>
+    
+    <label for="q1">Question 1: What is the capital of China?</label><br>
+    <input type="radio" name="q" value="0"> Tokyo 
+    <input type="radio" name="q" value="1"> Beijing 
+    <input type="radio" name="q" value="0"> Paris 
+    <input type="radio" name="q" value="0"> New York 
+    <input type="button" onclick="f1()" value="Check Your Score">
+    <p id="p1"></p>
+
+    <hr/>
+    <label for="s1">Question 2 : Select the capital of China:</label>
+    <select name="s1" id="s1">
+        <option value="Tokyo">Tokyo</option>
+        <option value="Beijing">Beijing</option>
+        <option value="Paris">Paris</option>
+        <option value="New York">New York</option>
+    </select>
+
+    <input type="button" onclick="f2()" value="Check Your Score">
+    <p id="p2"></p>
+</body>
+</html>

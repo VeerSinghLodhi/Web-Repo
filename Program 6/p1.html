@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program1 </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #parent-box{
+            width:500px;
+            height:600px;
+            border:1px solid black;
+        }
+        .button-class{
+            width: 100px;
+            height: 25px;
+            border-radius: 20px;
+            background-color: #6F42C1;
+            color:white;
+            border:none;
+            outline:none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        x=0;
+        color=new Array("#333","red","#6F42C1");
+        function fun1()
+        {
+            document.getElementById('parent-box').style.backgroundColor=color[x++];
+            if(x==3)
+                x=0;
+        }
+        function fun2()
+        {
+            document.getElementById('parent-box').style.backgroundColor=color[x--];
+            if(x==-1)
+                x=2;
+        }
+    </script>
+    <input class="button-class" type="button"  value="Previous" onclick="fun1()">
+    <div id="parent-box">
+
+    </div>
+    
+    <input class="button-class" type="button"  value="Next" onclick="fun2()">
+</body>
+</html>

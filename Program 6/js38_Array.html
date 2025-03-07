@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>XITS - Code Studio - Array</title>
+	<style>
+	#books {
+  		   font-family: Arial, Helvetica, sans-serif;
+		   border-collapse: collapse;
+		   width: 100%;
+		   }
+
+	#books td, #books th {
+ 		   border: 1px solid #ddd;
+		   padding: 8px;
+		   }
+
+	#books tr:nth-child(even){background-color: #f2f2f2;}
+
+	#books tr:hover {background-color: #ddd;}
+	#books th {
+	  padding-top: 12px;
+  	  padding-bottom: 12px;
+	  text-align: left;
+  	  background-color: #4CAF50;
+   	  color: white;
+   	  }
+</style>
+    <script>
+  	n_arr= new Array(4);
+  	for(i=0;i<4;i++)
+  	{
+    n_arr[i] = new Array(4);
+	n_arr[i][0] = prompt("Enter Book Code:","A1");
+	n_arr[i][1] = prompt("Enter Book Name:","ABC");
+	n_arr[i][2] = prompt("Enter Publisher's Name:","BPB");
+	n_arr[i][3] = prompt("Enter Book Price:","100");
+	}
+  	
+   document.write("<table id='books'><tr><th>Book Code</th><th>Book Name</th><th>Publisher</th><th>Book Price</th></tr>");  
+	for(i=0;i<4;i++)
+   	{
+   		document.write("<tr><td>",n_arr[i][0],"</td>");
+		document.write("<td>",n_arr[i][1],"</td>");
+		document.write("<td>",n_arr[i][2],"</td>");
+		document.write("<td>",n_arr[i][3],"</td></tr>");
+	}
+	document.write("</table>");
+  </script>
+  </head>
+  <body>
+  </body>
+</html>

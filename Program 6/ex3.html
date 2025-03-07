@@ -1,0 +1,171 @@
+<html>
+<head>
+<h2>JavaScript Array.forEach()</h2>
+<p>Calls a function once for each array element.</p>
+
+<p id="p1"></p>
+
+<script>
+const number1 = [45, 4, 9, 16, 25];
+
+let txt1 = "";
+number1.forEach(myFunction);
+document.getElementById("p1").innerHTML = txt1;
+
+function myFunction(value) {
+  txt1 += value + "<br>"; 
+}
+</script>
+
+</head>
+<body>
+    <h1>JavaScript typeof</h1>
+<pre>
+    In JavaScript there are 5 different data types that can contain values:
+
+string
+number
+boolean
+object
+function
+There are 6 types of objects:
+
+Object
+Date
+Array
+String
+Number
+Boolean
+And 2 data types that cannot contain values:
+
+null
+undefined
+</pre>
+<h2>The JavaScript typeof Operator</h2>
+
+<p>The typeof operator returns the type of a variable, object, function or expression.</p>
+
+<p id="p2"></p>
+
+<script>
+document.getElementById("p2").innerHTML = 
+  typeof "john" + "<br>" +
+  typeof 3.14 + "<br>" +
+  typeof NaN + "<br>" +
+  typeof false + "<br>" +
+  typeof [1,2,3,4] + "<br>" +
+  typeof {name:'john', age:34} + "<br>" +
+  typeof new Date() + "<br>" +
+  typeof function () {} + "<br>" +
+  typeof myCar + "<br>" +
+  typeof null;
+</script>
+
+Primitive Data
+A primitive data value is a single simple data value with no additional properties and methods.
+
+The typeof operator can return one of these primitive types:
+
+string
+number
+boolean
+undefined
+<h2>JavaScript typeof</h2>
+<p>The typeof operator returns the type of a variable or an expression.</p>
+
+<p id="p3"></p>
+
+<script>
+document.getElementById("p3").innerHTML = 
+typeof "john" + "<br>" + 
+typeof 3.14 + "<br>" +
+typeof true + "<br>" +
+typeof false + "<br>" +
+typeof x;
+</script>
+Complex Data
+The typeof operator can return one of two complex types:
+
+function
+object
+The typeof operator returns "object" for objects, arrays, and null.
+
+The typeof operator does not return "object" for functions.
+<h2>JavaScript typeof</h2>
+<p>The typeof operator returns object for both objects, arrays, and null.</p>
+<p>The typeof operator does not return object for functions.</p>
+
+<p id="p4"></p>
+
+<script>
+document.getElementById("p4").innerHTML = 
+typeof {name:'john', age:34} + "<br>" +
+typeof [1,2,3,4] + "<br>" +
+typeof null + "<br>" +
+typeof function myFunc(){};
+</script>
+<script> 
+    /*Number
+    console.log(typeof 25 === 'number');
+    console.log(typeof 3.14 === 'number');
+    console.log(typeof(69) === 'number');   
+    
+    // log base 10
+    console.log(typeof Math.LN10 === 'number'); 
+    console.log(typeof Infinity === 'number'); 
+    
+    // Despite being "Not-A-Number"
+    console.log(typeof NaN === 'number');
+    
+    // Wrapping in Number() function
+    console.log(typeof Number('100') === 'number'); 
+    */
+  </script>
+isDATE(..)
+isArray(..)
+isNull(..)
+isindex
+    isString
+is(NaN)
+<h2>JavaScript For In Loop</h2>
+<p>The for in statement loops through the properties of an object:</p>
+
+<p id="p5"></p>
+
+<script>
+
+const person = {fname:"John", lname:"Doe", age:25}; 
+
+let txt2 = "";
+for (let x in person) {
+  txt2 += person[x] + " ";
+}
+
+document.getElementById("p5").innerHTML = txt2;
+</script>
+<h2>JavaScript For In</h2>
+<p>The for in statement can loops over array values:</p>
+
+<p id="p6"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+txt = new Number;
+txt=0;
+for (let x in numbers) {
+  txt += parseInt(numbers[x]) + "<br>"; 
+}
+
+document.getElementById("p6").innerHTML = txt;
+</script>
+<script>
+let ranks = ['A', 'B', 'C'];
+for (let i = 0; i < ranks.length; i++) {
+    document.write( ranks[i]);
+}
+</script>
+
+
+
+</body>
+</html>

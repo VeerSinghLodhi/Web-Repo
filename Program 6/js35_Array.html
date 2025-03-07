@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XITS - Code Studio - Array</title>
+    <script>
+    i=0;
+      function f1()
+      {
+        colors1=new Array("red","blue","green","yellow","orange");
+        colors2=new Array("white","yellow","aqua","red","navy");
+        document.bgColor=colors1[i];
+        document.fgColor=colors2[i];
+        alert(i);
+        i++;
+        if(i>=5)
+        i=0;
+      }
+   </script>
+  </head>
+  <body>
+  <h1>My Message</h1>;
+  <input type="button" value="Change" onclick="f1()" />
+  </body>
+</html> 

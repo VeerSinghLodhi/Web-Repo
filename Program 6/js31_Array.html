@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XITS - Code Studio - Array</title>
+  </head>
+  <body>
+  <script>
+    // Enter 5 values and display only values>50  
+    //REMOVE THE COMMENTS BELOW TO MAKE THE CODE WORK
+    /*arr1=new Array(5);
+    for(i=0;i<5;i++)
+    {
+    arr1[i]=parseInt(prompt("Enter any value",0));
+    if(arr1[i]>50)
+    document.write("<br />",arr1[i]);
+    }*/
+  </script>
+ <script>
+    // Q. Run a loop from 1 to 50, accept the multiples of 5 
+    //and save them in an array and display.
+    arr2=new Array(10);
+    for(a=1;a<=50;a++)
+    {
+    if(a%5==0)
+    {
+    arr2[a]=a;
+    }
+      document.write("arr2[a] ",arr2);
+    }
+   
+    arr3=new Array("1","2","3","4","5");
+    arr4=new Array("1","2","3","4","5");
+    arr5=new Array(5);
+    for(i=0;i<5;i++)
+    {
+    arr5[i]=parseInt(arr3[i])+parseInt(arr4[i]);
+    document.write("<br />",arr5[i]);
+    }
+    
+    arr6=new Array("1","2","3","4","5");
+    arr7=new Array("1","2","3","4","5");
+    arr8=new Array(5);
+    for(i=0;i<5;i++)
+    {
+    arr8[i]=arr6[i]+arr7[i];
+    document.write("<br />",arr8[i]);
+    }
+    //concatenate
+    // Q. create 3 arrays. user should input values using prompt in 2 of the arrays. find the greater value and save them in the 3rd array. 
+  </script> 
+  </body>
+</html>

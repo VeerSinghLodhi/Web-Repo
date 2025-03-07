@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title></title>
+  </head>
+  <body>
+  <script>
+  dt = new Date();
+  dt.setFullYear(2022);
+  document.write(dt);
+  dt.setFullYear(2019, 10, 13);//yy/mm/dd
+  document.write("<br />",dt);
+   
+	day1 = new Date();
+	day2 = new Date();
+	day2.setFullYear(2024, 11, 15);
+	document.write("<br />",day2);
+	if (day2 > day1) 
+	{
+	text = "Welcome to the website";
+	}
+	else 
+	{
+  	text = "Last day of registering for the website is over";
+	}
+	document.write("<h1>",text,"</h1");
+  </script>
+  <p id="p1"></p>
+<pre>
+<h2>Set Date methods are used for setting a part of a date:</h2>
+	Method	 		 Description
+	setDate()		 Set the day as a number (1-31)
+	setFullYear()	 Set the year (optionally month and day)
+	setHours()		 Set the hour (0-23)
+	setMilliseconds()Set the milliseconds (0-999)
+	setMinutes()	 Set the minutes (0-59)
+	setMonth()		 Set the month (0-11)
+	setSeconds()	 Set the seconds (0-59)
+	setTime()		 Set the time (milliseconds since January 1, 1970)
+</pre>
+
+  </body>
+</html>

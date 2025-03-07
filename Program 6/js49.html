@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Tue, 12 Jan 2021 11:02:27 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    
+  </head>
+  <body>
+  <script>
+  stud_names = ["Yamini", "Aarav", "Vijay", "Mayur", "Rohit" ];
+  marks = [ 80, 78, 90, 70, 80 ];
+  document.write("<br />",stud_names,"<br />",marks);
+  // Array length
+  document.write("<br />",stud_names.length,"<br />",marks.length);
+  for(i=0;i<marks.length;i++)
+  {
+  document.write("<br />",marks[i]);
+  }
+  // Array concat 
+  stud_list = stud_names.concat(marks);
+  grls = new Array("A","B");
+  boys = new Array("r","v");
+  all_1 = new Array();
+  all_1 = grls.concat(boys);//1 array
+  all_2 = all_1.concat(boys,grls); 
+  document.write("<br />",stud_list,"<br />");
+  document.write("<br />",all_1,"<br />");
+  document.write("<br />",all_2,"<br />");
+  //Array element deletion
+  delete marks[2];
+  delete stud_names[3];
+  document.write("<br />",stud_names,"<br />",marks);
+  </script>
+</body>
+</html>

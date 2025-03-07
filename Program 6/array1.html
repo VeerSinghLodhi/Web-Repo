@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <script>
+        i=0;
+        function f1()
+        {
+            arr_fonts = new Array("arial","tahoma","vivaldi");
+            
+            a =new Array(4);
+            a[0] = 12;
+            a[1] = "Pooja";
+            a[2] = "12-Dec-2025";
+            a[3] = true;
+            //document.write ("<font face='",arr_fonts[i],"'>",a,"</font>");
+            document.getElementById('hd1').innerHTML = "<font face='"+arr_fonts[i]+"'>"+a+"</font>";
+            i++;
+            if(i==3)
+                i=0;
+        }
+        j=0;
+        function f2(){
+            colors=new Array("#000000","teal","yellow","#aabbcc");
+            document.getElementById('hd1').style.color=colors[j++];
+            if(j==4)
+                j=0;
+        }
+    </script>
+    <input type="button" value="Font" onclick="f1()"/>
+    <input type="button" value="Color" onclick="f2()"/>
+    <h1 id="hd1"></h1>
+</body>
+</html>

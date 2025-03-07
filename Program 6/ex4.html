@@ -1,0 +1,50 @@
+<html>
+    <head>
+    <script>
+    product = new Array(3);
+    function add_pro()
+    {
+        for(i=0;i<3;i++)
+        {
+            product[i] = new Array(3);
+            product[i][0] = prompt("Enter Product Code","000");
+            product[i][1] = prompt("Enter Product Name","Not Named");
+            product[i][2] = prompt("Enter Product Type","Not Named");
+        }
+    }    
+    function show_pro()
+    {
+        for(i=0;i<3;i++)
+        {
+            document.write("<p>Product Code",product[i][0], "</p><p>Enter Product Name :",product[i][1],"</p><p>Product Type :",product[i][2],"</p><br/>");
+        }
+    }
+   function show_product()
+    {
+        p_code = prompt("Enter product code :",0);
+        
+        for(i=0;i<3;i++)
+        {
+            if(p_code==product[i][0])
+            {
+            document.getElementById("div1").innerHTML = "<p>Product Code"+product[i][0]+ "</p><p>Enter Product Name :"+product[i][1]+  +"</p><p>Product Type :"+product[i][2]+"</p><br/>";          
+          
+            }
+            /*else
+            document.getElementById("div1").innerHTML = "<p>Product Code Not Found";
+                /*/
+        }
+    }
+    </script>
+    </head>
+    <body>
+        <div>
+        <h1>Product Details</h1>
+        <input type="button" value="ADD PRODUCT" onclick="add_pro()">
+        <input type="button" value="SHOW ALL PRODUCTS" onclick="show_pro()">
+        <input type="button" value="SHOW PRODUCTS" onclick="show_product()">
+        </div>
+        <div id="div1"></div>
+        
+    </body>
+</html>

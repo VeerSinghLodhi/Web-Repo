@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XITS - Code Studio - Array</title>
+  </head>
+  <body>
+    Double Dimensional Array<br />
+    <script>
+      arr1 = new Array(5);
+      arr1[0] = new Array(2);
+      arr1[0][0]="A"; arr1[0][1]="B";
+      arr1[1] = 20;
+      arr1[2] = 30;
+      arr1[3] = 40;
+      arr1[4] = 50;
+      document.write(arr1);
+  </script>
+<hr />
+<script>
+  n_arr= new Array(3);
+  for(i=0;i<=2;i++)
+  {
+  n_arr[i]= new Array(4);
+	n_arr[i][0] = prompt("Enter student name:","Ankit");
+	for(j=1;j<4;j++)
+	{
+	n_arr[i][j] = prompt("Enter student marks:","0");
+	}
+  }
+  for(i=0;i<=2;i++)
+  {
+	for(j=0;j<4;j++)
+	{
+	document.write(n_arr[i][j]);
+	}
+	
+ 	document.write("<br />");
+  }
+  </script>
+  </body>
+</html>

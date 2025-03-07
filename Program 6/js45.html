@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <script>
+	num=12345.4654;
+ 	document.write(num);
+    document.write("<br />");
+	num1=12345.789;
+	document.write(Math.round(num));
+	//num= parseFloat(no.value);
+	//document.write(Math.round(parseFloat(no.value)));
+	document.write("<br />");
+	document.write(Math.round(num1,2));
+	document.write("<br />");
+	document.write(Math.pow(10,3));//10*10*10
+	document.write("<br />");
+	document.write(Math.ceil(num));//12345.4654 
+	document.write("<br />");
+	document.write(Math.floor(num));
+	document.write("<br />");
+	document.write(Math.cos(60));
+	document.write("<br />");
+	document.write(Math.sin(60));
+	document.write("<br />");
+	document.write(Math.tan(60));
+	document.write("<br />");
+	document.write(Math.sqrt(2));
+	document.write("<br />");
+	document.write(Math.sqrt(64));
+	document.write("<br />");
+	document.write(Math.log(10)); 
+	document.write("<br />");
+	document.write(Math.max(60,45,34,10,100));
+	document.write("<br />");
+	document.write(Math.min(60,45,34,10,100));
+	document.write("<br />");
+	document.write(Math.random(100));
+	document.write("<br />");
+	//p = Math.toSource(Math.pow(100,2));
+	//document.write(p);
+
+	function roundToDecimal(number, decimalPlaces) {
+  const multiplier = 10 * decimalPlaces;
+  return Math.round(number * multiplier) / multiplier;
+}
+
+const number = 123.45673;
+const roundedNumber = roundToDecimal(number, 2);
+document.write(roundedNumber); // Output: 123.46
+
+	</script>
+  </head>
+  <body>
+  <pre>
+1	abs()  Returns the absolute value of a number.
+2	acos() Returns the arccosine (in radians) of a number.
+3	asin() Returns the arcsine (in radians) of a number.
+4	atan() Returns the arctangent (in radians) of a number.
+5	atan2()Returns the arctangent of the quotient of its arguments.
+6	ceil() Returns the smallest integer greater than or equal to a number.
+7	cos()  Returns the cosine of a number.
+8	exp()  Returns EN, where N is the argument, and E is Euler's constant, the base of the natural logarithm.
+9	floor()Returns the largest integer less than or equal to a number.
+10	log()  Returns the natural logarithm (base E) of a number.
+11	max()  Returns the largest of zero or more numbers.
+12	min()  Returns the smallest of zero or more numbers.
+13	pow()  Returns base to the exponent power, that is, base exponent.
+14	random()Returns a pseudo-random number between 0 and 1.
+15	round()Returns the value of a number rounded to the nearest integer.
+16	sin()  Returns the sine of a number.
+17	sqrt() Returns the square root of a number.
+18	tan()  Returns the tangent of a number.
+19	toSource() Returns the string "Math".
+</pre>
+
+  </body>
+</html>
