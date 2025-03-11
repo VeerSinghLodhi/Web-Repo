@@ -1,0 +1,11 @@
+.box1{
+    border:3px solid blue;
+}
+.box2{
+    border:2px solid #000000;
+
+}
+#veer{
+    background-color: teal;
+    height: 300px;
+}
