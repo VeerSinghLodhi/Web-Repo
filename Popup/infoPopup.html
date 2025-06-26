@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Update Popup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn {
+            padding: 10px 60px;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+        }
+
+        .popup {
+            width: 80%;
+            height: 20%;
+            background-color: #fff;
+            border-radius: 10px;
+            position: fixed;
+            bottom: -100%;
+            right: 10%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            visibility: hidden;
+            opacity: 0;
+            transition: bottom 0.4s, opacity 0.4s;
+        }
+
+        .popup img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .popup-content {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .popup h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 5px;
+        }
+
+        .popup p {
+            font-size: 14px;
+            margin: 0;
+            color: #555;
+        }
+
+        .popup button {
+            padding: 8px 20px;
+            background-color: #00BD48;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup button:hover {
+            background-color: #c0392b;
+        }
+
+        .open-popup {
+            visibility: visible;
+            bottom: 20px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button type="submit" class="btn" id="openBTN">Show Job Update</button>
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Success Icon">
+                <div>
+                    <h2>Job Updated!</h2>
+                    <p>The details for your job posting have been successfully updated.</p>
+                </div>
+            </div>
+            <button type="button" id="closeBTN">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.getElementById("popup");
+        const openBTN = document.getElementById("openBTN");
+        const closeBTN = document.getElementById("closeBTN");
+
+        openBTN.addEventListener('click', function () {
+            popup.classList.add("open-popup");
+        });
+
+        closeBTN.addEventListener('click', function () {
+            popup.classList.remove("open-popup");
+        });
+    </script>
+</body>
+</html>
