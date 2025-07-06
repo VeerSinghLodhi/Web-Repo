@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Seeker Registration Form</title>
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css}" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css}">
+    <link rel="stylesheet" th:href="@{/cssfolder/jobseekerstyle.css}">
+
+</head>
+<body class="bg-light">
+
+<!--<div th:include="HeaderAndFooter/header :: siteheader"></div>-->
+<main>
+    <div class="container">
+        <div class="form-card">
+          <h2 class="form-title">Job Seeker Registration</h2>
+          <form th:action="@{/savejobseeker}" onsubmit="return getCheckPassword()" method="post" th:object="${jsdata}" enctype="multipart/form-data">
+            <div class="form-group mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" onkeyup="checkErrorMessage()" th:value="${jsdata.name}" id="name" name="name" class="form-control" placeholder="Enter full name" required>
+                <p th:each="err : ${#fields.errors('name')}" th:text="${err}" style="color:red;" id="nameerrormessage"></p> <!--  class="alert alert-danger"-->
+            </div>
+              <div class="form-group mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="text" th:value="${jsdata.email}" id="email" name="email" class="form-control" onkeyup="checkErrorMessage()" placeholder="Enter email address" required>
+                    <p th:each="err : ${#fields.errors('email')}" th:text="${err}" style="color:red;"  id="emailerrormessage"></p>
+              </div>
+              <div class="form-group mb-3">
+                  <label for="contact" class="form-label">Contact number</label>
+                  <input type="text" th:value="${jsdata.contact}" id="contact" name="contact" class="form-control" onkeyup="checkErrorMessage()" placeholder="Enter contact number" required>
+                    <p th:each="err : ${#fields.errors('contact')}" th:text="${err}" style="color:red;" id="contacterrormessage"> </p>
+              </div>
+              <div class="form-group mb-3">
+                  <label for="address" class="form-label">Address</label>
+                 <textarea class="form-control" th:value="${jsdata.address}" id="address" name="address" onkeyup="checkErrorMessage()" placeholder="Enter your address"></textarea>
+                  <p th:each="err : ${#fields.errors('address')}" th:text="${err}" style="color:red;" id="addresserrormessage"> </p>
+              </div>
+              <div class="row mb-3">
+                  <div class="form-group col-lg-6 col-sm-12 mb-3" >
+                      <label class="form-label" for="profile_picture">Profile Picture</label>
+                      <input type="file"  class="form-control" id="profile_picture" name="uploadedProfileImage">
+<!--                      <p th:each="err : ${#fields.errors('profile_picture')}" th:text="${err}" style="color:red;"> </p>-->
+                  </div>
+                  <div class="form-group col-lg-6 col-sm-12 ">
+                      <label class="form-label" for="resume">Resume(Optional)</label>
+                      <input type="file" class="form-control" id="resume" name="uploadresume">
+                  </div>
+              </div>
+              <div class="row mb-3">
+                  <div class="form-group col-lg-6 col-sm-12 mb-3 ">
+                      <label for="password" class="form-label">Create Password</label>
+                      <input type="text" th:value="${jsdata.password}" onkeyup="checkPasswordOnkey()" class="form-control" id="password" name="password" placeholder="Enter password">
+                    <p th:each="err : ${#fields.errors('password')}" th:text="${err}" style="color:red;" id="passworderrormessage"></p>
+                  </div>
+                  <div class="form-group col-lg-6 col-sm-12 ">
+                      <label for="confirm-password"  class="form-label">Confirm Password</label>
+                      <input type="text" onkeyup="checkPasswordOnkey()" class="form-control" id="confirm-password" name="confirm-password" placeholder="Enter confirm password">
+                      <p id="err_confirmpassword" style="color:red;"></p>
+                  </div>
+              </div>
+              <div class="form-group mb-3">
+                  <label for="skills" class="form-label">Skills</label>
+                  <input type="text" id="skills" th:value="${jsdata.skills}" name="skills" class="form-control" onkeyup="checkErrorMessage()" placeholder="Enter your skills (comma separated)">
+                  <p th:each="err : ${#fields.errors('skills')}" th:text="${err}" style="color:red;" id="skillserrormessage"></p>
+              </div>
+              <div class="form-group mb-3">
+                  <input type="checkbox" id="agreement" name="agreement" required>I agree to abide by all terms and policies related to this registration.
+              </div>
+              <button type="submit"  class="btn btn-submit w-100">Submit</button>
+          </form>
+            <div class="alreadyhaveaccount">
+                <p>Already have an account?<a th:href="@{/getjobseekerlogin}">Login</a></p>
+            </div>
+        </div>
+    </div>
+</main>
+<!--<div th:include="HeaderAndFooter/footer :: sitefooter"></div>-->
+    <script th:src="@{jsfolder/jobseekerscript.js}"></script>
+</body>
+</html>
