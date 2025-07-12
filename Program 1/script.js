@@ -32,7 +32,5 @@ u=null;
                 u=username;
                 p=password1;
             }
-            else{
-                
-            }
+            
         }
